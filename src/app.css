@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+  background-color: #2E63D7ff;
+}
+.heading-text-color{
+  color:#f9ca06;
+}
