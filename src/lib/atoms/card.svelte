@@ -1,11 +1,13 @@
 <script lang="ts">
   export let imageUrl:string;
+  export let id:string;
   export let label:string;
   export let rating:number;
   export let price:number;
+  export let onClick:(id:string)=>void;
 </script>
 
-<div class="card cursor-pointer  w-36 h-42 lg:w-72 lg:h-72 rounded overflow-hidden shadow-lg bg-white flex flex-col items-center">
+<div on:click={()=>onClick(id)} class="card cursor-pointer  w-36 h-42 lg:w-72 lg:h-72 rounded overflow-hidden shadow-lg bg-white flex flex-col items-center">
   <div class="w-full h-1/2 mt-2 flex justify-center">
     <img class="h-full" src={imageUrl} alt="Sunset in the mountains">
   </div>
