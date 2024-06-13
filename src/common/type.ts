@@ -10,4 +10,10 @@ export type product={
   "count": number
   }
 }
+export enum SelectOption {
+  Default = 'Default',
+  Price = 'Price',
+  Rating = 'Rating',
+}
+
 

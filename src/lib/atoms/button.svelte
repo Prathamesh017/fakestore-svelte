@@ -1,11 +1,14 @@
 <script lang="ts">
   export let onClick:()=>void;
   export let label:string;
-  export let classes:string;
+  export let disabled:boolean=false;
+  export let classes:string="";
 </script>
 
 
-<button on:click={onClick} class={classes}>{label}</button>
+<button disabled={disabled} on:click={onClick} class={classes}>{label}
+  <slot/>
+</button>
 
 
 
