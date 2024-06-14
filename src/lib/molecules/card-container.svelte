@@ -1,7 +1,7 @@
 <script lang="ts">
  import {SelectOption,type product } from "../../common/type";
  import { goto } from '$app/navigation';
- import Card from "../atoms/card.svelte";
+ import Card from "../atoms/card/card.svelte";
  export let data:product[];
  export let selected:SelectOption;
  export let searchText:string="";
