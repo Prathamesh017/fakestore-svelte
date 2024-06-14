@@ -1,7 +1,7 @@
 <script lang="ts">
   import { getContext } from 'svelte';
   import { goto } from '$app/navigation';
-  import Button  from "$lib/atoms/button.svelte";
+  import Button  from "$lib/atoms/button/button.svelte";
   const cart:any = getContext('cart');
   let totalPrice=0;
   let cartProducts:{}[]=[];

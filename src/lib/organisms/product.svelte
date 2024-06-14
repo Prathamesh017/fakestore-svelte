@@ -1,6 +1,6 @@
 
 <script  lang="ts">
-  import Button from "$lib/atoms/button.svelte";
+  import Button from "$lib/atoms/button/button.svelte";
   import { goto } from '$app/navigation';
   import { getContext } from 'svelte';
 	import type { product } from "../../common/type";
