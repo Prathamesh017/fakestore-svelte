@@ -1,7 +1,7 @@
 <script lang="ts">
   import CardContainer from "$lib/molecules/card-container.svelte";
   import { SelectOption, type product } from "../../common/type";
-  import Dropdown from "$lib/atoms/dropdown.svelte";
+  import Dropdown from "$lib/atoms/dropdown/dropdown.svelte";
 	import Input from "$lib/atoms/input.svelte";
   export let data:product[];
   export let selected:SelectOption;

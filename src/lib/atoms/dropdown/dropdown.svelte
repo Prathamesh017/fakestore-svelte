@@ -1,5 +1,5 @@
  <script lang="ts">
-	import type { SelectOption } from "../../common/type";
+	import type { SelectOption } from "../../../common/type";
 
   export let selected:string="";
   export let options:string[]=[];
