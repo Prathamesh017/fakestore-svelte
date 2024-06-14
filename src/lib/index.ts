@@ -5,4 +5,4 @@ import Card from "./atoms/card/card.svelte";
 import Dropdown from "./atoms/dropdown/dropdown.svelte";
 import CardContainer from "./molecules/card-container.svelte";
 import Product from "./organisms/product.svelte";
-import Input from "./atoms/input.svelte";
+import Input from "./atoms/input/input.svelte";
