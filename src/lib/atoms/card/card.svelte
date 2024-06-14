@@ -9,7 +9,7 @@
 
 <div data-testid="card-element" on:click={()=>onClick(id)} class="card cursor-pointer  w-36 h-42 lg:w-72 lg:h-72 rounded overflow-hidden shadow-lg bg-white flex flex-col items-center">
   <div class="w-full h-1/2 mt-2 flex justify-center">
-    <img class="h-full" src={imageUrl} alt="Sunset in the mountains">
+    <img id={id} class="h-full" src={imageUrl} alt="image-alt">
   </div>
   <div class="px-3 py-2 lg:px-6 lg:py-4">
     <p class="lg:font-bold text-sm lg:mb-2">{label.length>80?label.substring(0,80):label}</p> 

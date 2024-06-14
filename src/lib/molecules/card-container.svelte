@@ -29,7 +29,7 @@ function onCardClick(id:string){
 </script>
 
 
-<div class="card-container w-full lg:w-4/5  grid grid-cols-2  lg:grid-cols-3 gap-4">
+<div data-testid="card-container-element"  class="card-container w-full lg:w-4/5  grid grid-cols-2  lg:grid-cols-3 gap-4">
     {#each  filteredData as item}
         <Card onClick={onCardClick} id={item.id}  label={item.title} price={item.price} rating={item.rating.rate} imageUrl={item.image}></Card>
     {/each}
