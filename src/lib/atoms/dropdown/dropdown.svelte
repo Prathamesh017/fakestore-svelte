@@ -6,6 +6,6 @@
   export let onChange:(selected:SelectOption)=>void;
 </script>
 
-<select on:change={(e)=>onChange(e.target?.value)} bind:value={selected} class="bg-primary-700 hover:bg-primary-800  focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center">
+<select on:change={(e)=>onChange(e.target?.value)} bind:value={selected} class="bg-primary-700 bg-[#eeeee4]  w-3/4 lg:w-1/4 p-2 hover:bg-primary-800  focus:ring-primary-300 font-medium rounded-lg text-slate-400 text-sm">
 	{#each options as value}<option {value}>{value} </option>{/each}
 </select>

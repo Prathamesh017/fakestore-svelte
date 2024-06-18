@@ -7,7 +7,7 @@
   export let onClick:(id:string)=>void;
 </script>
 
-<div data-testid="card-element" on:click={()=>onClick(id)} class="card-background-color card cursor-pointer font-serif  w-36 h-42 lg:w-72 lg:h-72 rounded overflow-hidden shadow-lg bg-white flex flex-col items-center">
+<div data-testid="card-element" on:click={()=>onClick(id)} class="card-background-color card cursor-pointer font-serif  w-full h-42 lg:w-72 lg:h-72 rounded overflow-hidden shadow-lg bg-white flex flex-col items-center">
   <div class="w-full h-1/2 mt-2 flex justify-center">
     <img  id={id} class="h-full  mix-blend-darken " src={imageUrl} alt="image-alt">
   </div>
