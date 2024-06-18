@@ -6,3 +6,8 @@ import Dropdown from "./atoms/dropdown/dropdown.svelte";
 import CardContainer from "./molecules/card-container.svelte";
 import Product from "./organisms/product.svelte";
 import Input from "./atoms/input/input.svelte";
+import Header from "./organisms/dashboard.svelte";
+import FilledStarIcon from "./icons/unfilled-star.svelte"
+import UnfilledStarIcon from "./icons/unfilled-star.svelte"
+import SearchIcon from "./icons/search.svelte";
+import CartIcon from "./icons/cart.svelte";

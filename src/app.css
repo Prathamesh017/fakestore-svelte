@@ -5,9 +5,13 @@
 body{
   /* background-color: #2E63D7ff;
    */
-   background-color: #d8e2e8;
+   background-color: #b8b9b7;
 }
 .heading-text-color{
   color:#f9ca06;
+}
+
+.card-background-color{
+  background-color:#fffffd
 }
 
