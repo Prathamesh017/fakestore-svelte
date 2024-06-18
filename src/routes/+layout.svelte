@@ -8,10 +8,14 @@ import "../app.css";
 	const cart = writable([]);
 	const searchText=writable("");
 	const selectedCategories=writable([]);
+	const maxRating=writable(5);
+	const maxPricing=writable(200);
 	
 	setContext('cart', cart);
 	setContext("search",searchText);
 	setContext("category",selectedCategories);
+	setContext('maxPrice',maxPricing);
+	setContext('maxRating',maxRating)
 
 </script>
 

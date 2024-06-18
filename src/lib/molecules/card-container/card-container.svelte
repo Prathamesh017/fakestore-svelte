@@ -1,13 +1,15 @@
 <script lang="ts">
- import {SelectOption,type product } from "../../common/type";
+ import {SelectOption,type product } from "../../../common/type";
  import { goto } from '$app/navigation';
- import Card from "../atoms/card/card.svelte";
+ import Card from "../../atoms/card/card.svelte";
  export let data:product[];
  export let selected:SelectOption;
  export let selectedCategories:string[]=[];
  export let searchText:string="";
+ export let rating:number;
+ export let price:number;
  let filteredData:product[]=data;
- $:if(selected!==SelectOption.Default || searchText || selectedCategories.length>0){
+ $:if(selected!==SelectOption.Default || searchText || selectedCategories.length>0 || rating || price){
     filteredData=data.sort((item1:product,item2:product)=>{
      return selected===SelectOption.Price?item1.price-item2.price:item2.rating.rate-item1.rating.rate;
     })
@@ -17,6 +19,16 @@
    if(selectedCategories.length>0){
      filteredData=filteredData.filter((data)=>{
        return selectedCategories.includes(data.category);
+      })
+    }
+    if(rating){
+      filteredData=filteredData.filter((data)=>{
+        return +data.rating.rate<=rating;
+      })
+    }
+    if(price){
+      filteredData=filteredData.filter((data)=>{
+        return +data.price<=price;
       })
     }
   }else{

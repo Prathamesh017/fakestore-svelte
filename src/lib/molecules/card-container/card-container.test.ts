@@ -1,7 +1,7 @@
 import { expect, test, vi } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
 import CardContainer from './card-container.svelte'; // Assuming your component's path
-import { SelectOption, type product } from '../../common/type';
+import { SelectOption, type product } from '../../../common/type';
 
 const mockData: product[] = [
   {
