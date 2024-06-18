@@ -7,9 +7,12 @@ import "../app.css";
 	// Create a store and update it when necessary...
 	const cart = writable([]);
 	const searchText=writable("");
+	const selectedCategories=writable([]);
 	
 	setContext('cart', cart);
 	setContext("search",searchText);
+	setContext("category",selectedCategories);
+
 </script>
 
 

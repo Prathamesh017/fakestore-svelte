@@ -4,23 +4,25 @@
  import Card from "../atoms/card/card.svelte";
  export let data:product[];
  export let selected:SelectOption;
+ export let selectedCategories:string[]=[];
  export let searchText:string="";
  let filteredData:product[]=data;
- $:if(selected!==SelectOption.Default){
-    filteredData=filteredData.sort((item1:product,item2:product)=>{
+ $:if(selected!==SelectOption.Default || searchText || selectedCategories.length>0){
+    filteredData=data.sort((item1:product,item2:product)=>{
      return selected===SelectOption.Price?item1.price-item2.price:item2.rating.rate-item1.rating.rate;
     })
-  }else{
-      filteredData=filteredData.sort((item1:product,item2:product)=>{
-     return (+item1.id) - (+item2.id)
-    })
-}
-$:if(searchText){
-   filteredData=filteredData.filter((data)=>{
+    filteredData=filteredData.filter((data)=>{
     return data.title.toLowerCase().startsWith(searchText.toLowerCase());
    })
-}else{
-  filteredData=data;
+   if(selectedCategories.length>0){
+     filteredData=filteredData.filter((data)=>{
+       return selectedCategories.includes(data.category);
+      })
+    }
+  }else{
+      filteredData=data.sort((item1:product,item2:product)=>{
+     return (+item1.id) - (+item2.id)
+    })
 }
 
 function onCardClick(id:string){
