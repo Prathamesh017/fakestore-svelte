@@ -9,7 +9,7 @@ import "../app.css";
 	const searchText=writable("");
 	const selectedCategories=writable([]);
 	const maxRating=writable(5);
-	const maxPricing=writable(200);
+	const maxPricing=writable(1000);
 	
 	setContext('cart', cart);
 	setContext("search",searchText);

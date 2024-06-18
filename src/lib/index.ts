@@ -14,3 +14,5 @@ import CartIcon from "./icons/cart.svelte";
 import Category from "./atoms/category/category.svelte";
 import RangeContainer from "./molecules/range-container";
 import Range from "./atoms/range/range.svelte";
+import ForwardIcon from "./icons/forward.svelte";
+import BackwardIcon from "./icons/backward.svelte";
