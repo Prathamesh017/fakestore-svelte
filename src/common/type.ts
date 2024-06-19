@@ -17,3 +17,8 @@ export enum SelectOption {
 }
 
 
+export interface cart{
+  title:string;
+  price:number;
+  quantity:number;
+}

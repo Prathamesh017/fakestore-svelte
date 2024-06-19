@@ -3,13 +3,18 @@
   import Button from "$lib/atoms/button/button.svelte";
   import { goto } from '$app/navigation';
   import { getContext } from 'svelte';
-	import type { product } from "../../common/type";
+	import type { cart, product } from "../../common/type";
   const cartStore:any= getContext('cart');
   export let product:product;
 
   function addToCart(title:string,price:number){
-    cartStore.update((cart:any)=>{
-      cart.push({title,price});
+    cartStore.update((cart:cart[])=>{
+      const product = cart.find(product => product.title === title);
+      if (product) {
+        product.quantity++;
+       }   else {
+         cart.push({ title, price, quantity: 1 });
+       }
       return cart;
     })
     goto("/cart")

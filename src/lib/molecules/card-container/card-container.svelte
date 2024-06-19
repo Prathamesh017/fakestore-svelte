@@ -19,6 +19,7 @@
     filteredData=data.sort((item1:product,item2:product)=>{
      return selected===SelectOption.Price?item1.price-item2.price:item2.rating.rate-item1.rating.rate;
     })
+    
     filteredData=filteredData.filter((data)=>{
     return data.title.toLowerCase().startsWith(searchText.toLowerCase());
    })
