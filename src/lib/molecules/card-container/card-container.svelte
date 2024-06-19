@@ -2,6 +2,7 @@
  import {SelectOption,type product } from "../../../common/type";
  import { goto } from '$app/navigation';
  import Card from "../../atoms/card/card.svelte";
+	import Star from "$lib/atoms/star/star.svelte";
  export let data:product[];
  export let selected:SelectOption;
  export let selectedCategories:string[]=[];
@@ -70,6 +71,8 @@ function onCardClick(id:string){
 
 <div data-testid="card-container-element"  class="card-container w-full  grid grid-cols-1  lg:grid-cols-3 justify-space-between gap-6">
     {#each  paginatiedItems as item}
-        <Card onClick={onCardClick} id={item.id}  label={item.title} price={item.price} rating={item.rating.rate} imageUrl={item.image}></Card>
+        <Card onClick={onCardClick} id={item.id}  label={item.title} price={item.price} rating={item.rating.rate} imageUrl={item.image}>
+          <Star rating={Math.floor(item.rating.rate)}></Star>
+        </Card>
     {/each}
 </div>

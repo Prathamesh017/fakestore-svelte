@@ -17,6 +17,6 @@
   </div>
   <div class="flex flex-col lg:flex-row items-center mb-2 justify-between w-full px-5">
     <p class="font-mono">{`\u20B9`}{price}</p>
-     <Star rating={Math.floor(rating)}></Star>
+    <slot></slot>
   </div>
 </div>
