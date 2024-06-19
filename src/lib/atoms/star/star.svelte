@@ -5,12 +5,16 @@
   $:unfilled=5-rating;
 </script>
 
-<div class="flex">
-{#each Array(rating) as _, index}
-<FilledStar/>
-{/each}
-{#each Array(unfilled) as _, index}
-<UnfilledStar/>
-{/each}
+<div data-testid="star-test" class="flex">
+  <span data-testid="filled-stars" class="flex">
+    {#each Array(rating) as _, index}
+    <FilledStar/>
+    {/each}
+  </span>
+  <span data-testid="unfilled-stars">
+    {#each Array(unfilled) as _, index}
+    <UnfilledStar/>
+    {/each}
+  </span>
 </div>
 
