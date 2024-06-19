@@ -11,7 +11,7 @@
     <FilledStar/>
     {/each}
   </span>
-  <span data-testid="unfilled-stars">
+  <span data-testid="unfilled-stars" class="flex">
     {#each Array(unfilled) as _, index}
     <UnfilledStar/>
     {/each}
